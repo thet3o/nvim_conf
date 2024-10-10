@@ -72,7 +72,7 @@ require('lspconfig').jdtls.setup({
 				runtimes = {
 					{
 						name = "JavaTemurin-23",
-						path = "$HOME/.sdkman/candidates/java/23-tem",
+						path = "/Users/thet3o/.sdkman/candidates/java/23-tem",
 						default = true
 					}
 				}
