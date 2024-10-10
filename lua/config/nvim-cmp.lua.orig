@@ -17,7 +17,7 @@ cmp.setup({
     }),
     preselect = cmp.PreselectMode.Item,
     confirmation = {
-        completeopt = 'menu,menuone,noinsert'
+        completeopt = 'menu,menuone'
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -47,10 +47,7 @@ cmp.setup.cmdline(':', {
 })
 
 -- Set up lspconfig.
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['jdtls'].setup {
     capabilities = capabilities
 }
